@@ -89,7 +89,7 @@ export const FirstBox = styled.div`
 `;
 
 export const DayWeatherBox = styled.div`
-  width: 12%;
+  width: 20%;
   height: 100%;
   margin-right: 10px;
   padding: 1em;
@@ -112,7 +112,7 @@ export const TodoContainer = styled.div`
 
 export const TodoInside = styled.div`
   padding-top: 0.1em;
-  width: 85%;
+  width: 70%;
   display: inline-block;
 `;
 
