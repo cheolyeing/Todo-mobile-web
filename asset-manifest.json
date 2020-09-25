@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/Todo-mobile-web/static/js/main.75b69356.chunk.js",
-    "main.js.map": "/Todo-mobile-web/static/js/main.75b69356.chunk.js.map",
+    "main.js": "/Todo-mobile-web/static/js/main.da8fe424.chunk.js",
+    "main.js.map": "/Todo-mobile-web/static/js/main.da8fe424.chunk.js.map",
     "runtime-main.js": "/Todo-mobile-web/static/js/runtime-main.9870bfbb.js",
     "runtime-main.js.map": "/Todo-mobile-web/static/js/runtime-main.9870bfbb.js.map",
     "static/js/2.5e68ec24.chunk.js": "/Todo-mobile-web/static/js/2.5e68ec24.chunk.js",
     "static/js/2.5e68ec24.chunk.js.map": "/Todo-mobile-web/static/js/2.5e68ec24.chunk.js.map",
     "index.html": "/Todo-mobile-web/index.html",
-    "precache-manifest.9da56191a278862ed3bd37398e0a0e36.js": "/Todo-mobile-web/precache-manifest.9da56191a278862ed3bd37398e0a0e36.js",
+    "precache-manifest.0da00890a4c4e2dc44af8502a7419995.js": "/Todo-mobile-web/precache-manifest.0da00890a4c4e2dc44af8502a7419995.js",
     "service-worker.js": "/Todo-mobile-web/service-worker.js",
     "static/js/2.5e68ec24.chunk.js.LICENSE.txt": "/Todo-mobile-web/static/js/2.5e68ec24.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9870bfbb.js",
     "static/js/2.5e68ec24.chunk.js",
-    "static/js/main.75b69356.chunk.js"
+    "static/js/main.da8fe424.chunk.js"
   ]
 }
