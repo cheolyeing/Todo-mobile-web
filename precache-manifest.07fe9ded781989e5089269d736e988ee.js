@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25ab55cb9357518a6d3434148ed29630",
+    "revision": "c7a6d3471cafdb60a8fafbeb8a9435f5",
     "url": "/Todo-mobile-web/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Todo-mobile-web/static/js/2.5e68ec24.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4667a07e794e91fed366",
-    "url": "/Todo-mobile-web/static/js/main.3b608364.chunk.js"
+    "revision": "0c0292a9028a67068f6a",
+    "url": "/Todo-mobile-web/static/js/main.a2f9db43.chunk.js"
   },
   {
     "revision": "1d9e22efc8e158ee22b7",
