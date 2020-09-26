@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import TodoManager from "./ManageTodos";
+import React, { useEffect, useState } from "react";
+
+import TodoManager from "./TodoManager";
 
 import {
   Title,
@@ -20,11 +20,27 @@ function TodoDetail(props: any) {
   const title: string = props.todo.title;
   const dueDate: string = props.todo.dueDate;
   const [done, setDone] = useState<boolean>(props.todo.done);
+  const [dateOver, setDateOver] = useState<boolean>(false);
   const todoManager: TodoManager = new TodoManager();
   const e = props.todo;
   const theme = {
     done: done,
     dueDate: dueDate !== undefined && dueDate !== null && dueDate !== "",
+    dateOver: dateOver,
+  };
+
+  const checkDateOver = () => {
+    let checkdDateOver: boolean = false;
+
+    if (dueDate === undefined || dueDate === null || dueDate === "") {
+    } else {
+      let today: Date = new Date();
+      let split: string[] = dueDate.split("-");
+      if (+split[0] < today.getFullYear()) checkdDateOver = true;
+      if (+split[1] < today.getMonth() + 1) checkdDateOver = true;
+      if (+split[2] <= today.getDate()) checkdDateOver = true;
+    }
+    setDateOver(checkdDateOver);
   };
 
   const handleClickDone = () => {
@@ -43,14 +59,16 @@ function TodoDetail(props: any) {
   const showDuedate = () => {
     if (dueDate !== undefined && dueDate !== null && dueDate !== "") {
       return (
-        <TodoDueDate>
+        <TodoDueDate theme={theme}>
           {DUE_DATE}
           {dueDate}
         </TodoDueDate>
       );
     }
   };
-
+  useEffect(() => {
+    checkDateOver();
+  }, []);
   return (
     <TodoContainer>
       <TodoCheckBoxContainer theme={theme}>
@@ -64,7 +82,7 @@ function TodoDetail(props: any) {
       <TodoInside>
         <Title
           to={{
-            pathname: `/editTodo/${id}`,
+            pathname: `/Todo-mobile-web/editTodo/${id}`,
             state: {
               e,
             },

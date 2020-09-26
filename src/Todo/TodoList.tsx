@@ -9,7 +9,7 @@ import {
 } from "../Style";
 
 import Todo from "./Todo";
-import TodoManager from "./ManageTodos";
+import TodoManager from "./TodoManager";
 import TodoDetail from "./TodoDetail";
 
 function TodoList() {
@@ -36,7 +36,7 @@ function TodoList() {
       <div>
         <AddLink
           to={{
-            pathname: `/newTodo/${e.id}`,
+            pathname: `/Todo-mobile-web/newTodo/${e.id}`,
             state: {
               e,
             },

@@ -8,9 +8,9 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact={true} path="/" component={Home} />
-        <Route path="/newTodo/:id" component={WriteTodo} />
-        <Route path="/editTodo/:id" component={WriteTodo} />
+        <Route exact={true} path="/Todo-mobile-web" component={Home} />
+        <Route path="/Todo-mobile-web/newTodo/:id" component={WriteTodo} />
+        <Route path="/Todo-mobile-web/editTodo/:id" component={WriteTodo} />
       </Switch>
     </BrowserRouter>
   );

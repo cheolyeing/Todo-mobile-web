@@ -38,7 +38,7 @@ export const SaveDiv = styled.div`
   margin-top: -10px;
   margin-bottom: 60px;
   padding: 0.5em 0em 0.5em 0em;
-  min-width: 95%;
+  width: 95%;
   height: 100%;
   text-align: center;
   font-size: 17px;
@@ -118,7 +118,8 @@ export const TodoInside = styled.div`
 
 export const TodoTitle = styled.div`
   padding-left: 0.5em;
-  color: black;
+  color: ${(props) =>
+    !props.theme.done && props.theme.dateOver ? "red" : "black"};
   width: 85%;
   font-size: 18px;
   text-decoration: ${(props) => (props.theme.done ? "line-through" : "none")};
@@ -126,7 +127,8 @@ export const TodoTitle = styled.div`
 
 export const TodoDueDate = styled.div`
   padding-left: 0.5em;
-  color: #666666;
+  color: ${(props) =>
+    !props.theme.done && props.theme.dateOver ? "red" : "#666666"};
   font-size: 14px;
 `;
 

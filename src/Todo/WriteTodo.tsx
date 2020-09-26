@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Input, ContentArea, SaveLink, SaveDiv, Header3 } from "../Style";
 
 import Todo from "./Todo";
-import TodoManager from "./ManageTodos";
+import TodoManager from "./TodoManager";
 
 function WriteTodo(props: any) {
   const TODO: string = "To-Do";
@@ -16,10 +16,15 @@ function WriteTodo(props: any) {
   let id = todo.id;
   const [title, setTitle] = useState<string>(todo.title);
   const [content, setContent] = useState<string>(todo.content);
-  const [dueDate, setDueDate] = useState<string>("");
+  const [dueDate, setDueDate] = useState<string>(todo.dueDate);
   const done = todo.done;
 
-  const onClickSaveBtn = () => {
+  const onClickSaveBtn = (error: any) => {
+    if (!titleCheck()) {
+      alert("제목을 입력해주세요!");
+      error.preventDefault();
+      return;
+    }
     const todoManager: TodoManager = new TodoManager();
     todoManager.loadTodos();
 
@@ -30,6 +35,13 @@ function WriteTodo(props: any) {
     } else {
       todoManager.updateTodo(new Todo(id, title, content, done, dueDate));
     }
+  };
+
+  const titleCheck = () => {
+    if (title === "") {
+      return false;
+    }
+    return true;
   };
 
   return (
@@ -71,9 +83,14 @@ function WriteTodo(props: any) {
           />
         </SaveDiv>
       </div>
-      <SaveLink to="/">
-        <SaveDiv onClick={onClickSaveBtn}>{SAVE_BUTTON}</SaveDiv>
-        {/* <button onClick={onClickSaveBtn}>{SAVE_BUTTON}</button> */}
+      <SaveLink to="/Todo-mobile-web">
+        <SaveDiv
+          onClick={(e) => {
+            onClickSaveBtn(e);
+          }}
+        >
+          {SAVE_BUTTON}
+        </SaveDiv>
       </SaveLink>
     </div>
   );
