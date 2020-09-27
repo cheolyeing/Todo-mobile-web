@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-
 import { WeatherBox, Header3 } from "../Style";
-
+import dotenv from "dotenv";
 import DailyWeather from "./DailyWeather";
 
 function WeeklyWeather() {
   const LATITUDE: string = "37.5665";
   const LONGITUDE: string = "126.9780";
   const LANGUAGE: string = "kr";
-  const API_KEY: string = "48b0da616e1a822f8221af5e7a1f639e";
 
   const weatherTitle: string = "이번주 날씨";
   const WEEKS: number[] = Array.from(Array(7).keys());
@@ -17,6 +15,8 @@ function WeeklyWeather() {
   const [icon, setIcon] = useState<string[]>([]);
 
   useEffect(() => {
+    dotenv.config();
+    const API_KEY = process.env.REACT_APP_API_KEY;
     let collectWeather: string[] = [];
     let collectTemperature: string[] = [];
     let collectIcon: string[] = [];

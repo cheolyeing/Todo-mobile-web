@@ -50,10 +50,9 @@ function WriteTodo(props: any) {
         <h1>{TODO}</h1>
         <Header3>{TITLE}</Header3>
         <SaveDiv>
-          <Input
-            type="text"
+          <ContentArea
+            rows={1}
             value={title}
-            size={50}
             onChange={(e) => {
               setTitle(e.target.value);
             }}

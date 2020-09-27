@@ -38,8 +38,7 @@ export const SaveDiv = styled.div`
   margin-top: -10px;
   margin-bottom: 60px;
   padding: 0.5em 0em 0.5em 0em;
-  width: 95%;
-  height: 100%;
+  width: 100%;
   text-align: center;
   font-size: 17px;
   cursor: pointer;
@@ -58,10 +57,8 @@ export const TodoListContainer = styled.div`
 `;
 
 export const Input = styled.input`
-  margin-top: -111.1px;
   min-width: 95%;
   background-color: #c0c0c0;
-  padding: 0.5em 0em 0.5em 0em;
   border: 0;
   outline: 0;
 `;

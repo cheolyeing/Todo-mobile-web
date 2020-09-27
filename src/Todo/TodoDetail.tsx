@@ -29,20 +29,6 @@ function TodoDetail(props: any) {
     dateOver: dateOver,
   };
 
-  const checkDateOver = () => {
-    let checkdDateOver: boolean = false;
-
-    if (dueDate === undefined || dueDate === null || dueDate === "") {
-    } else {
-      let today: Date = new Date();
-      let split: string[] = dueDate.split("-");
-      if (+split[0] < today.getFullYear()) checkdDateOver = true;
-      if (+split[1] < today.getMonth() + 1) checkdDateOver = true;
-      if (+split[2] <= today.getDate()) checkdDateOver = true;
-    }
-    setDateOver(checkdDateOver);
-  };
-
   const handleClickDone = () => {
     todoManager.loadTodos();
     todoManager.changeDoneById(id);
@@ -66,9 +52,20 @@ function TodoDetail(props: any) {
       );
     }
   };
+
   useEffect(() => {
-    checkDateOver();
-  }, []);
+    let checkdDateOver: boolean = false;
+    let dueDate = props.todo.dueDate;
+    if (dueDate === undefined || dueDate === null || dueDate === "") {
+    } else {
+      let today: Date = new Date();
+      let split: string[] = dueDate.split("-");
+      if (+split[0] < today.getFullYear()) checkdDateOver = true;
+      if (+split[1] < today.getMonth() + 1) checkdDateOver = true;
+      if (+split[2] <= today.getDate()) checkdDateOver = true;
+    }
+    setDateOver(checkdDateOver);
+  }, [props]);
   return (
     <TodoContainer>
       <TodoCheckBoxContainer theme={theme}>
