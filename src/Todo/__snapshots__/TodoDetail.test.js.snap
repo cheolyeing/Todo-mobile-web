@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoDetail /> matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-iqAbSa ZilSU"
+  >
+    <div
+      class="sc-fFSRdu bYHtHB"
+    >
+      <input
+        class="sc-fnVYJo TqA-dN"
+        type="checkbox"
+      />
+    </div>
+    <div
+      class="sc-crzoUp lkusge"
+    >
+      <a
+        class="sc-bdnylx hjKUCK"
+        href="/Todo-mobile-web/editTodo/123"
+      >
+         
+        <div>
+          <div
+            class="sc-dIsAE IMwkE"
+          >
+            Todo Title
+          </div>
+          <div
+            class="sc-bqGHjH eOlJBZ"
+          >
+            due date: 
+            2020-09-01
+          </div>
+        </div>
+      </a>
+    </div>
+    <div
+      class="sc-ksluoS iQwSjW"
+    >
+      <button
+        class="sc-hBMVcZ jTHzhK"
+      >
+        <span
+          aria-label="x"
+          role="img"
+        >
+          ❌
+        </span>
+      </button>
+    </div>
+    <hr />
+  </div>
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> matches snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      THIS WEEK
+    </h1>
+    <p>
+      신나는 일주일을 계획합시다!
+    </p>
+  </div>
+</div>
+`;
